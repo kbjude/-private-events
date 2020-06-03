@@ -7,14 +7,14 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         @user.save
         if @user.save
-            redirect_to new_user_path
+            redirect_to @user
         else
             render :new
         end
     end
 
     def show
-        @user = User.find(user_params[:id])
+        @user = User.find(params[:id])
     end
 
     private
