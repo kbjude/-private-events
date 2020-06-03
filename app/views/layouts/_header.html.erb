@@ -1,0 +1,6 @@
+<% if logged_in? %>
+  Hiya, <%= current_user.name %>! You're looking mighty fine today!
+  <%=link_to “Log Out”, logout_path %>
+<% else %>
+  <%= link_to 'Login', new_session_path %>
+<% end %>

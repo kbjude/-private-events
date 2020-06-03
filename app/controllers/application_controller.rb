@@ -1,10 +1,11 @@
 class ApplicationController < ActionController::Base
-    protect_forgery_with :exception
+    protect_from_forgery with: :exception
     before_action :login_required
 
     def login_required
         if !logged_in?
-            redirect_to login_path :notice => "You are not logged in, please do so or signup"
+            flash.now[:notice] = "You are not logged in, please do so or signup"
+            redirect_to new_session_path
         end
     end
 
