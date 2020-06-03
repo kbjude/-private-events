@@ -7,6 +7,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         @user.save
         if @user.save
+            flash.now[:success] = "User has been successfully added"
             redirect_to @user
         else
             render :new
