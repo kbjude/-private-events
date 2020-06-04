@@ -1,0 +1,11 @@
+<h1> New Post </h1>
+
+<%= form_for @event do |f|%>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %><br><br>
+    <%= f.label :Description %><br>
+    <%= f.text_field :description %><br><br>
+    <%= f.label :Date %><br>
+    <%= f.text_field :date %>
+    <%= f.button %>
+<% end %>
