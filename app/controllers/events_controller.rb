@@ -5,11 +5,12 @@ class EventsController < ApplicationController
     end
 
     def new
-        @event = Event.new
+        @event = current_user.events.build
     end
 
     def create
-        
+        @event = current_user.events.build(events_params)
+
     end
 
     def show
