@@ -2,7 +2,9 @@
 
 <ul>
     <li>
-        
+        <% @user.events.each do |event| %>  
+            <%= link_to event.name, event_path(event) %>
+        <% end %>
     </li>
 </ul>
 
