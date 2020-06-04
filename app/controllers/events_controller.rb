@@ -10,5 +10,5 @@ class EventsController < ApplicationController
 
     def show
     end
-
+    params.require(:event).permit(:name, :description, :date, :user_id)
 end
