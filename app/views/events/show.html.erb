@@ -4,3 +4,6 @@
 
 <p> <%= @event.description %> </p>
 
+<% @event.users.each do |user| %>
+    <%= user.name %>
+<% end %>
