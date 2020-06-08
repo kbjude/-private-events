@@ -2,10 +2,12 @@ class EventsController < ApplicationController
     skip_before_action :login_required, :only => [:index]
     def index
         @events = Event.all
+        @past_event = @events.past_date
+        @upcoming_event = @events.upcoming_date
     end
 
     def new
-        @event = current_user.events.build
+        @event = Event.new
     end
 
     def create
@@ -21,6 +23,7 @@ class EventsController < ApplicationController
 
     def show
         @event = Event.find(params[:id])
+        @owner = Event.creator(@event)
     end
 
     private
