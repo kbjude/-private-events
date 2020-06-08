@@ -1,25 +1,23 @@
-# README
+This is a collaborative project but worked on individually to create a Private Events page which allows users to create account and events, along with session creation and destruction. At the end of the project, the user should view past events, upcoming and all the events aon the index page
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Requirements
+Download the application and ensure that you have Ruby installed.
+Install rails 5.2.3 if you haven't already. You could run the command gem install rails -v '5.2.3' to install rails.
 
-Things you may want to cover:
+Features
+Some of the features of this project include:
 
-* Ruby version
+User authentication using session id
 
-* System dependencies
+Authorisation
 
-* Configuration
+New User account and events creation
 
-* Database creation
+Display of past event and upcoming events on both user page and events page
 
-* Database initialization
+Technologies Used
+Rails for Ruby
+Contributors
+Jude Kajura
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# -private-events
+GitHub: @kbjude
