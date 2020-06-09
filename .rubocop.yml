@@ -61,6 +61,7 @@ Layout/ExtraSpacing:
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
-
+Lint/AssignmentInCondition:
+  Enabled: false
 Lint/NumberConversion:
   Enabled: false
