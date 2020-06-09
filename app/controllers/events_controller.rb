@@ -1,5 +1,10 @@
 class EventsController < ApplicationController
-  skip_before_action :login_required, only: [:index]
+  before_action :login_required, only: %i[new create]
+  def show
+    @event = Event.find_by_id(params[:id])
+    @owner = Event.creator(@event)
+  end
+
   def index
     @events = Event.all
     @past_event = @events.past_date
@@ -20,14 +25,9 @@ class EventsController < ApplicationController
     end
   end
 
-  def show
-    @event = Event.find(params[:id])
-    @owner = Event.creator(@event)
-  end
-
   private
 
   def events_params
-    params.require(:event).permit(:name, :description, :date, :user_id)
+    params.require(:event).permit(:name, :description, :date)
   end
 end
