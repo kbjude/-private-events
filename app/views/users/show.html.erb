@@ -11,14 +11,18 @@
 
     <h4> Past Events </h4>
         <li>
-            <% if !@past_events = "" %>
-                <%= @past_events %>
+            <% if @past_events %>
+            <% @past_events.each do |event|%> 
+                <p> <%= event.name %></p>
+                <% end %>
             <% else %>
-                <%= print "No past event" %>
+                <%= fail %>
             <% end %>
         </li>
 
     <h4> Upcoming Events </h4>
-        <li> <%= @upcoming_events %> </li>
+        <li> <% @upcoming_events.each do |event| %> </li>
+                <p> <%= event.name %></p>
+                <% end %>
 </ul>
     <p> <%= link_to 'Back', root_path %></p>

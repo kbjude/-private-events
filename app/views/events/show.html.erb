@@ -2,6 +2,8 @@
 
 <p> <%= @event.description %> </p>
 
+<h4> Attendees </h4>
+
 <% @event.users.each do |user| %>
     <p><%= user.name %></p>
 <% end %>

@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     if @user
       @past_events = @user.events.past_date
-      @upcoming_event = @user.events.upcoming_date
+      @upcoming_events = @user.events.upcoming_date
     end
   end
 
