@@ -1,30 +1,26 @@
 AllCops:
+  EnabledByDefault: true
   Exclude:
-    - "db/**/*"
-    - "bin/*" 
-    - "config/**/*"
+    - "README.md"
     - "Guardfile"
     - "Rakefile"
-    - "node_modules/**/*"
+    - "Gemfile"
+    - 'spec/**/*'
+    - 'bin/**/*'
+    - 'config/**/*'
 
   DisplayCopNames: true
 
 Layout/LineLength:
-  Max: 120
+  Max: 142
 Metrics/MethodLength:
-  Include:
-    - "app/controllers/*"
-    - "app/models/*"
-  Max: 20
+  Max: 22
 Metrics/AbcSize:
-  Include:
-    - "app/controllers/*"
-    - "app/models/*"
   Max: 50
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
-  ExcludedMethods: ['describe']
+  ExcludedMethods: ["describe"]
   Max: 30
 
 Style/Documentation:
@@ -39,6 +35,24 @@ Style/DefWithParentheses:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
+Style/HashEachMethods:
+  Enabled: false
+Style/HashTransformKeys:
+  Enabled: false
+Style/HashTransformValues:
+  Enabled: false
+Style/MethodCallWithArgsParentheses:
+  Enabled: false
+Style/Copyright:
+  Enabled: false
+Style/DocumentationMethod:
+  Enabled: false
+Style/MissingElse:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
+Style/DoubleNegation:
+  Enabled: false
 
 Layout/HashAlignment:
   EnforcedColonStyle: key
@@ -47,14 +61,6 @@ Layout/ExtraSpacing:
 Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
-Lint/RaiseException:
+
+Lint/NumberConversion:
   Enabled: false
-Lint/StructNewOverride:
-  Enabled: false
-Style/HashEachMethods:
-  Enabled: false
-Style/HashTransformKeys:
-  Enabled: false
-Style/HashTransformValues:
-  Enabled: false
-© 2020 GitHub, Inc.
