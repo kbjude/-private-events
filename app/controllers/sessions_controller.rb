@@ -29,7 +29,4 @@ class SessionsController < ApplicationController
   def login(_user)
     session[:user_id] = nil
   end
-
 end
-
-
