@@ -1,9 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
-  context 'User Login attemps' do
+RSpec.describe User, type: :feature do
+  context 'Login attemps' do
     it 'returns login form when no user is logged in' do
-      expect(page).to contain('Signin')
+      visit new_user_path
+      expect(page).to have_content('Signin')
     end
   end
 end
