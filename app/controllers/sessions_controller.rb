@@ -22,7 +22,9 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
-  def show; end
+  def show
+    @user = User.find_by_id(params[:id])
+  end
 
   private
 
