@@ -10,6 +10,9 @@
   </head>
 
   <body>
+  <% flash.each do |type,  msg| %>
+    <p style="color: red"><%= msg %></p>
+  <% end %>
     <%= render 'layouts/header' %>
     <%= flash.notice %>
     <%= yield %>

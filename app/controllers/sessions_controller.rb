@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path
     elsif flash[:alert] = 'Invalid name or username'
-      @new_user = User.new(params)
+      @user = User.new(params)
       redirect_to root_path
     else
       render 'new'
