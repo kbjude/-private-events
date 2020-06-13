@@ -1,0 +1,28 @@
+<p> <h3><%= @user.name %>'s Events List</h3> </p>
+
+<ul>
+    <h4> Created Events</h4>
+            <% @user.events.each do |event| %>
+                <li>
+                    <%= link_to event.name, event_path(event) %> <br
+                </li>
+            <% end %>
+
+
+    <h4> Past Events </h4>
+        <li>
+            <% if @past_events %>
+            <% @past_events.each do |event|%> 
+                <p> <%= event.name %></p>
+                <% end %>
+            <% else %>
+                <%= fail %>
+            <% end %>
+        </li>
+
+    <h4> Upcoming Events </h4>
+        <li> <% @upcoming_events.each do |event| %> </li>
+                <p> <%= event.name %></p>
+                <% end %>
+</ul>
+    <p> <%= link_to 'Back', root_path %></p>

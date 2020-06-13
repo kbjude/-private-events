@@ -1,0 +1,9 @@
+<% if logged_in? %>
+  Hi, <%= current_user.name %>
+  <%= link_to 'Logout', logout_path %> &nbsp &nbsp |
+  <%= link_to 'New Event', new_event_path %> |
+  <%= link_to 'Back to Events', root_path %>
+<% else %>
+  <%= link_to 'Login', new_session_path %> &nbsp &nbsp | &nbsp &nbsp 
+  <%= link_to 'Signup', new_user_path %>
+<% end %>
