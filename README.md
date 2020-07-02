@@ -43,3 +43,5 @@ Rails for Ruby
 Jude Kajura
 
 GitHub: @kbjude
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/d847c24cb730a50b3773/maintainability)](https://codeclimate.com/github/kbjude/-private-events/maintainability)
