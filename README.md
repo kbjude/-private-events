@@ -45,3 +45,5 @@ Jude Kajura
 GitHub: @kbjude
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/d847c24cb730a50b3773/maintainability)](https://codeclimate.com/github/kbjude/-private-events/maintainability)
+
+[![Test Coverage](https://api.codeclimate.com/v1/badges/d847c24cb730a50b3773/test_coverage)](https://codeclimate.com/github/kbjude/-private-events/test_coverage)
